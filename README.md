@@ -1,2 +1,1 @@
 # askd.rocks
-Personal site

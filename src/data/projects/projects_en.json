@@ -1,0 +1,286 @@
+[
+  {
+		"url": "aegida-advisors.ru",
+		"title": "Aegis",
+		"picture": "aegida.jpg",
+		"role": "frontend",
+		"year": 2011,
+		"feature": "«Activate Aegis»",
+		"customer": "cpeople"
+	},
+	{
+		"url": "agama.info",
+		"title": "Agama",
+		"picture": "agama.jpg",
+		"year": 2014,
+		"order": 3,
+		"role": "frontend",
+		"customer": "cpeople"
+	},
+	{
+		"url": "promo.cityexpress.ru",
+		"title": "City Express Promo",
+		"picture": "cityexpress.jpg",
+		"role": "frontend",
+		"year": 2012,
+		"feature": "navigation"
+	},
+	{
+		"url": "clicktotrip.com",
+		"title": "Clicktotrip",
+		"picture": "clicktotrip.jpg",
+		"role": "frontend",
+		"year": 2013
+	},
+	{
+		"url": "cpeople.ru",
+		"title": "CreativePeople",
+		"picture": "cpeople.jpg",
+		"role": "frontend",
+		"year": "2013-2014",
+		"order": 1,
+		"customer": "cpeople"
+	},
+	{
+		"url": "attributeproducts.co.uk",
+		"title": "Domenik",
+		"picture": "domenic.jpg",
+		"role": "frontend",
+		"year": 2012,
+		"feature": "kaleidoscope",
+		"customer": "cpeople"
+	},
+	{
+		"url": "домофон.рф",
+		"title": "Домофон",
+		"picture": "domofon.jpg",
+		"role": "frontend",
+		"year": 2013,
+		"feature": "promoblock, navigation",
+		"customer": "cpeople"
+	},
+	{
+		"url": "econika.ru",
+		"title": "Econika",
+		"picture": "econika.jpg",
+		"role": "frontend",
+		"year": "2012-2014",
+		"order": 4,
+		"customer": "cpeople"
+	},
+	{
+		"url": "fsnlab.com",
+		"title": "FSNLAB",
+		"picture": "fsnlab.jpg",
+		"role": "frontend (main page)",
+		"year": 2013,
+		"customer": "cpeople"
+	},
+	{
+		"url": "geizer.com",
+		"title": "Гейзер",
+		"picture": "geyser.jpg",
+		"role": "frontend",
+		"year": 2014,
+		"order": 6,
+		"feature": "sidebar, navigation",
+		"customer": "cpeople"
+	},
+	{
+		"url": "hemacore.com",
+		"title": "Hemacore",
+		"picture": "hemacore.jpg",
+		"role": "frontend",
+		"year": 2011,
+		"feature": "promoblock",
+		"customer": "cpeople"
+	},
+	{
+		"url": "ichance.ru/en",
+		"title": "Ichance",
+		"picture": "ichance.jpg",
+		"role": "frontend",
+		"year": 2013,
+		"feature": "all site",
+		"customer": "cpeople"
+	},
+	{
+		"url": "iskra-park.ru",
+		"title": "Искра-парк",
+		"picture": "iskrapark.jpg",
+		"role": "frontend",
+		"year": "2015-2016",
+		"feature": "\"why\" and apartments sections",
+		"customer": "cpeople"
+	},
+	{
+		"url": "kuvalda.ru/promo/euro2012/",
+		"title": "Допили до Евро",
+		"picture": "kuvaldaeuro2012.jpg",
+		"role": "frontend",
+		"year": 2012,
+		"feature": "saw",
+		"customer": "cpeople"
+	},
+	{
+		"url": "en.jenialubich.com",
+		"title": "Jenia Lubich Official Website",
+		"picture": "lubich.jpg",
+		"role": "frontend",
+		"year": 2012,
+		"customer": "cpeople"
+	},
+	{
+		"url": "marussia.dev.cpeople.ru",
+		"title": "Marussia",
+		"picture": "marussia.jpg",
+		"role": "frontend",
+		"year": "2012, 2014",
+		"order": 2,
+		"feature": "adaptivity",
+		"customer": "cpeople"
+	},
+	{
+		"url": "2011.subbotnik.megafon.cpeople.ru",
+		"title": "Зелёный Субботник",
+		"picture": "megafonsubbotnik.jpg",
+		"year": 2011,
+		"role": "frontend",
+		"customer": "cpeople"
+	},
+	{
+		"url": "",
+		"title": "Midea Promo",
+		"picture": "midea.jpg",
+		"role": "frontend",
+		"year": 2012,
+		"case": "http://midea.daichi.ru/backstage",
+		"customer": "cpeople"
+	},
+	{
+		"url": "pepsi.dev.cpeople.ru",
+		"title": "Pepsi Promo",
+		"picture": "pepsi.jpg",
+		"role": "frontend",
+		"year": 2012,
+		"customer": "cpeople"
+	},
+	{
+		"url": "presentstar.ru",
+		"title": "Presentstar",
+		"picture": "presentstar.jpg",
+		"role": "frontend",
+		"year": "2014-2015",
+		"order": 4,
+		"customer": "cpeople"
+	},
+	{
+		"url": "rwgg.com",
+		"title": "Reworld",
+		"picture": "reworld.jpg",
+		"role": "frontend",
+		"year": 2013,
+		"feature": "adaptivity",
+		"customer": "cpeople"
+	},
+	{
+		"url": "calc.rockwool.ru",
+		"title": "Calculator Rockwool",
+		"picture": "rockwool.jpg",
+		"role": "frontend (step 2)",
+		"year": 2011,
+		"feature": "dynamic scheme",
+		"customer": "cpeople"
+	},
+	{
+		"url": "rdcm.com",
+		"title": "RD Construction",
+		"picture": "rdcm.jpg",
+		"role": "frontend",
+		"year": "2014-2015",
+		"order": 2,
+		"feature": "cube, sidebar, 404",
+		"customer": "cpeople"
+	},
+	{
+		"url": "rospravo.ru/en",
+		"title": "Muranov, Chernyakov & Partners",
+		"picture": "rospravo.jpg",
+		"role": "frontend/backend",
+		"year": 2011,
+		"feature": "main page, info center",
+		"customer": "cpeople"
+	},
+	{
+		"url": "sikaylo-partners.ru/en/history",
+		"title": "Sikaylo, Romakhova & Partners",
+		"picture": "sikaylo.jpg",
+		"role": "frontend/backend",
+		"year": 2011,
+		"customer": "cpeople"
+	},
+	{
+		"url": "tervolina.devh.cpeople.ru",
+		"title": "Tervolina",
+		"picture": "tervolina.jpg",
+		"role": "frontend",
+		"year": 2013,
+		"customer": "cpeople"
+	},
+	{
+		"url": "thelegend1920.ru",
+		"title": "The Legend 1920",
+		"picture": "thelegend1920.jpg",
+		"role": "frontend (main, catalog)",
+		"year": 2015,
+		"order": 3,
+		"feature": "ring animaition",
+		"customer": "cpeople"
+	},
+	{
+		"url": "usupovdvor.dev.cpeople.ru",
+		"title": "Юсупов Двор",
+		"picture": "usupovdvor.jpg",
+		"role": "frontend",
+		"year": 2012,
+		"customer": "cpeople"
+	},
+	{
+		"url": "vengo-trade.ru",
+		"title": "Vengo Trade",
+		"picture": "vengo.jpg",
+		"role": "frontend",
+		"year": 2015,
+		"order": 5,
+		"feature": "navigation, catalog, brands",
+		"customer": "cpeople"
+	},
+	{
+		"url": "myviasat.ru",
+		"title": "Viasat",
+		"picture": "viasat.jpg",
+		"role": "frontend",
+		"year": "2012-2015",
+		"order": 1,
+		"customer": "cpeople"
+	},
+	{
+		"url": "woosterhound.com/en",
+		"title": "Wooster Hound",
+		"picture": "woosterhound.jpg",
+		"role": "frontend",
+		"year": 2014,
+		"order": 5,
+		"feature": "navigation",
+		"customer": "cpeople"
+	},
+	{
+		"url": "zestleaders.com/en",
+		"title": "Zest",
+		"picture": "zest.jpg",
+		"role": "frontend",
+		"year": 2012,
+		"feature": "all site",
+		"customer": "cpeople"
+	}
+]

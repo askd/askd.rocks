@@ -1,0 +1,64 @@
+.page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+
+  &:target {
+    pointer-events: auto;
+  }
+
+  &_default {
+    pointer-events: auto;
+  }
+
+  &:target ~ &_default {
+    pointer-events: none;
+  }
+
+  /* display: none;
+
+  &:target {
+    display: block;
+  }
+
+  &_default {
+    display: block;
+  }
+
+  &:target ~ &_default {
+    display: none;
+  } */
+
+  &:target {
+    overflow: visible;
+  }
+
+  &_default:target {
+    overflow: hidden;
+  }
+
+  &:target ~ & {
+    height: 0;
+    transition: height 0s 0.35s;
+  }
+}
+
+#projects {
+  background: $color-black;
+}
+
+body::after {
+  content: '';
+  display: block;
+  width: 100%;
+  padding-top: 150%;
+  pointer-events: none;
+
+  @media screen and (min-width: 640px) {
+    padding-top: 50%;
+  }
+}

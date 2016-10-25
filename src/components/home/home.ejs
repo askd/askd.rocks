@@ -1,0 +1,44 @@
+<div class="home">
+  <div class="home-overlay home-overlay_tl"></div>
+	<div class="home-overlay home-overlay_br"></div>
+	<div class="home-overlay home-overlay_t"></div>
+	<div class="home-overlay home-overlay_b"></div>
+
+  <div class="home-item home-item_about">
+    <div class="home-wrapper">
+      <h1 class="home-title"><%= labels.person.name %></h1>
+      <p class="home-text"><%= labels.person.position %></p>
+
+      <p class="home-text"><%= labels.about.brief %></p>
+      <a class="home-subtitle" href="#about"><%= labels.about.title %></a>
+
+      <p class="home-lang">
+        <% if (lang === 'ru') { %>
+        <a href="/en">In English</a>
+        <% } else {  %>
+        <a href="/ru">По-русски</a>
+        <% }  %>
+      </p>
+    </div>
+  </div>
+  <div class="home-item home-item_projects">
+    <a class="home-projects" href="#projects">
+      <div class="home-projects-circle">
+        <svg viewBox="0 0 144 144"><circle cx="72" cy="72" r="70" stroke="currentColor" stroke-width="2" stroke-dasharray="6,6" fill="transparent" /></svg>
+      </div>
+      <h2 class="home-subtitle"><%= labels.projects %></h2>
+    </a>
+  </div>
+  <div class="home-item home-item_contacts">
+    <div class="home-wrapper">
+      <h2 class="home-subtitle"><%= labels.contacts.title %></h2>
+      <p class="home-text"><%= labels.contacts.mail %>: <a href="mailto:hi@askd.rocks">hi@askd.rocks</a></p>
+      <p class="home-text"><%= labels.contacts.social %>:</p>
+      <div class="home-social">
+        <a class="home-social-item home-social-item_tw" href="https://twitter.com/asktwi"></a>
+        <a class="home-social-item home-social-item_fb" href="https://www.facebook.com/anna.selezniova"></a>
+        <a class="home-social-item home-social-item_in" href="https://instagram.com/askinst/"></a>
+      </div>
+    </div>
+  </div>
+</div>

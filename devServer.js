@@ -31,6 +31,20 @@ app.use('/:lang', (req, res, next) => {
   });
 });
 
+app.use('/', (req, res, next) => {
+  const lang = 'en';
+  const filename = path.join(compiler.outputPath, `index_${lang}.html`);
+
+  compiler.outputFileSystem.readFile(filename, (err, html) => {
+    if (err) {
+      return next(err);
+    }
+    res.set('content-type', 'text/html');
+    res.send(html);
+    return res.end();
+  });
+});
+
 app.listen(3000, 'localhost', (err) => {
   if (err) {
     console.log(err); // eslint-disable-line

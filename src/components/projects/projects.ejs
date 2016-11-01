@@ -1,17 +1,20 @@
 <div class="projects">
-  <input class="projects-item-toggle" id="project0" name="project" value="0" type="radio">
   <ul class="projects-list">
+    <li class="projects-item projects-item_title">
+      <input class="projects-item--toggle" id="project0" name="project" value="0" type="radio">
+      <label class="projects-item--side" for="project0">
+        <h2 class="projects-title"><%= texts.title %></h2>
+      </label>
+    </li>
     <% projects.forEach((project, index) => { %>
     <li class="projects-item">
-      <div class="projects-item-wrap">
-        <input class="projects-item-toggle" id="project<%= (index + 1) %>" name="project" value="<%= (index + 1) %>" type="radio">
-        <label class="projects-item-side projects-item-side_back" for="project0">
-          <img class="projects-item-pic" src="/files/projects/<%= project.picture %>" alt="">
-
-          <div class="projects-item-content">
-            <h3 class="projects-item-title">
+      <div class="projects-item--wrap">
+        <input class="projects-item--toggle" id="project<%= (index + 1) %>" name="project" value="<%= (index + 1) %>" type="radio">
+        <label class="projects-item--side projects-item--side_back" for="project0">
+          <div class="projects-item--content">
+            <h3 class="projects-item--title">
             <% if (project.url !== '') { %>
-              <a class="projects-item-url" href="http://<%= project.url %>" target="_blank">
+              <a class="projects-item--url" href="http://<%= project.url %>" target="_blank">
                 <%= project.title ? project.title : project.url %>
               </a>
             <% }  else if (project.title) { %>
@@ -19,34 +22,35 @@
             <% } %>
             </h3>
 
-            <dl class="projects-item-options">
+            <dl class="projects-item--options">
             <% if (project.year) { %>
-              <dt><%= labels.year %>:</dt>
+              <dt><%= texts.year %></dt>
               <dd><%= project.year %></dd>
             <% } %>
             <% if (project.role) { %>
-              <dt><%= labels.role %>:</dt>
+              <dt><%= texts.role %></dt>
               <dd><%= project.role %></dd>
             <% } %>
-            <% if (project.feature) { %>
-              <dt><%= labels.feature %>:</dt>
-              <dd><%= project.feature %></dd>
-            <% } %>
             <% if (project.case) { %>
-              <dt><%= labels.case %>:</dt>
-              <dd><a class="projects-item-url" href="<%= project.case %>" target="_blank"><%= project.case %></a></dd>
+              <dt><%= texts.case %></dt>
+              <dd><a class="projects-item--url" href="<%= project.case %>" target="_blank"><%= project.case %></a></dd>
+            <% } %>
+            <% if (project.feature) { %>
+              <dt><%= texts.feature %></dt>
+              <dd><%= project.feature %></dd>
             <% } %>
             </dl>
           </div>
           <% if (project.customer) { %>
-            <a class="projects-item-customer projects-item-customer_<%= project.customer %>" href="<%= project.urlCustomer %>" target="_blank"></a>
+            <a class="projects-item--customer projects-item--customer_<%= project.customer %>" href="<%= project.urlCustomer %>" target="_blank"></a>
           <% } %>
         </label>
-        <label class="projects-item-side projects-item-side_front" for="project<%= (index + 1) %>">
-          <img class="projects-item-pic" src="/files/projects/<%= project.picture %>" alt="">
+        <label class="projects-item--side projects-item--side_front" for="project<%= (index + 1) %>"
+               style="background-image: url(/files/projects/<%= project.picture %>)">
         </label>
       </div>
     </li>
     <% }); %>
   </ul>
+  <label class="projects-close" for="toggle"></label>
 </div>

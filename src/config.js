@@ -1,8 +1,7 @@
 const colors = {
-  black: '#000',
-  white: '#fff',
-  gold: '#ffd900',
-  red: '#d5331e',
+  dark: '#000',
+  light: '#fff',
+  accent: '#26466d',
 };
 
 module.exports = { colors };

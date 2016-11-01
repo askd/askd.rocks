@@ -1,160 +1,93 @@
 .about {
-  padding-top: 40px;
-  padding-bottom: 48px;
-  opacity: 0;
-  transition: opacity 0.35s;
+  width: 100%;
+  max-width: 320px;
+  padding-top: 60px;
 
-  #about:target & {
-    opacity: 1;
+  @media (min-width: 801px) {
+    max-width: 480px;
   }
 
-  &-wrap {
-    width: 592px;
-    max-width: 100%;
-    margin: 0 auto;
-    background: $color-white;
-    color: $color-black;
-
-    &::after {
-      content: '';
-      clear: both;
-      overflow: hidden;
-    }
-  }
-
-  & h2 {
-    clear: left;
-    padding-top: 24px;
-    margin-left: 160px;
+  &-title {
     font-size: 24px;
-    line-height: 1.5;
-    letter-spacing: 0.1em;
+    line-height: 1;
+    font-weight: 400;
+    color: $color-dark;
   }
 
-  & h3 {
+  &-item {
     position: relative;
-    font-size: 11px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 24px 24px 36px;
+    font-size: 14px;
     line-height: 24px;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.05em;
 
     &::before {
       content: '';
       position: absolute;
-      top: 0;
-      left: -12px;
-      width: 0;
-      height: 0;
-      border-style: solid;
-      border-width: 12px 12px 0 0;
-      border-color: $color-gold transparent transparent transparent;
-    }
-  }
-
-  & p {
-    font-size: 14px;
-    line-height: 24px;
-    letter-spacing: 0.05em;
-  }
-
-  & p + p {
-    margin-top: 12px;
-  }
-
-  & p + ul {
-    margin-top: 12px;
-  }
-
-  & li {
-    font-size: 14px;
-    line-height: 24px;
-    letter-spacing: 0.05em;
-  }
-
-  & small {
-    font-size: 12px;
-    color: rgba(0, 0, 0, 0.5);
-  }
-
-  &-ttl {
-    float: left;
-    width: 160px;
-    box-sizing: border-box;
-    padding-top: 24px;
-  }
-
-  &-txt {
-    width: 420px;
-    margin-left: 172px;
-    box-sizing: border-box;
-    padding-top: 24px;
-
-    & .med {
-      opacity: 0.66;
+      top: 36px;
+      left: 24px;
+      width: 1px;
+      bottom: 24px;
+      background-color: #fff;
+      background-image:
+        linear-gradient(
+          transparent,
+          transparent 25%,
+          rgba(0, 0, 0, 0.25) 25%,
+          rgba(0, 0, 0, 0.25) 75%,
+          transparent 75%
+        );
+      background-size: 1px 12px;
     }
 
-    & .low {
-      opacity: 0.33;
+    &--title {
+      position: relative;
+      margin: 0 0 0 -12px;
+      opacity: 0.5;
+      font-size: 10px;
+      line-height: 24px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    &--text {
+      margin-top: 12px;
+
+      & small {
+        font-size: 12px;
+        color: rgba(0, 0, 0, 0.5);
+      }
+
+      &_exp {
+        & > dt {
+          margin-top: 12px;
+          color: rgba(0, 0, 0, 0.5);
+        }
+      }
+
+      &_pres {
+        & small {
+          display: block;
+
+          @media (min-width: 801px) {
+            display: inline;
+            margin-left: 12px;
+          }
+        }
+      }
     }
   }
 
   &-photo {
+    display: none;
     width: 100px;
-    margin: 48px auto 0;
+    margin: 24px 0 5px;
+    line-height: 0;
 
-    & > img {
+    &--image {
       width: 100%;
-    }
-  }
-
-  &-exp {
-    font-size: 14px;
-    line-height: 24px;
-    letter-spacing: 0.05em;
-
-    & dt {
-      float: left;
-      width: 100px;
-      color: rgba(0, 0, 0, 0.5);
-      padding: 12px 0;
-
-      &:first-of-type {
-        padding-top: 0;
-      }
-    }
-
-    & dd {
-      position: relative;
-      margin-left: 100px;
-      width: 320px;
-      padding: 12px 0;
-
-      &:first-of-type {
-        padding-top: 0;
-      }
-
-      &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 420px;
-        height: 1px;
-        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.25) 50%, transparent 0%);
-        background-position: 0 100%;
-        background-size: 8px 1px;
-        background-repeat: repeat-x;
-      }
-
-      &:first-of-type::before {
-        display: none;
-      }
-    }
-  }
-
-  &-pres {
-    & small {
-      margin-left: 12px;
     }
   }
 
@@ -164,48 +97,6 @@
 
     &:hover {
       border-color: transparent;
-    }
-  }
-}
-
-@media screen and (max-width: 639px) {
-  .about {
-    &-wrap {
-      width: 100%;
-      max-width: 420px;
-      margin: 0 20px;
-    }
-
-    & h2 {
-      padding-bottom: 12px;
-      margin-left: 0;
-    }
-
-    &-ttl {
-      width: 100%;
-      float: none;
-    }
-
-    &-txt {
-      width: 100%;
-      margin-left: 0;
-      padding-top: 12px;
-    }
-
-    &-exp {
-      & dt {
-        float: none;
-        width: 100%;
-        border-top: none;
-        padding-bottom: 0;
-      }
-
-      & dd {
-        margin-left: 0;
-        width: 100%;
-        border-top: none;
-        padding: 0;
-      }
     }
   }
 }

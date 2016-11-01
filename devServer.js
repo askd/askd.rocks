@@ -33,9 +33,9 @@ app.use('/:lang', (req, res, next) => {
 
 app.listen(3000, 'localhost', (err) => {
   if (err) {
-    console.log(err);
+    console.log(err); // eslint-disable-line
     return;
   }
 
-  console.log('Listening at http://localhost:3000');
+  console.log('Listening at http://localhost:3000'); // eslint-disable-line
 });

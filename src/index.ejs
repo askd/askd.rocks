@@ -4,43 +4,36 @@
   var template = {
     about:    require("./components/about/about_" + lang + ".ejs"),
     projects: require("./components/projects/projects.ejs"),
-    home:     require("./components/home/home.ejs"),
-    nav:      require("./components/nav/nav.ejs"),
+    header:   require("./components/header/header.ejs"),
   };
-  var data = {
-    meta:     require("./data/meta/meta_" + lang + ".js"),
-    labels:   require("./data/labels/labels_" + lang + ".js"),
-    projects: require("./data/projects/projects_" + lang + ".js"),
-  };
+  var texts = require("./data/texts/texts_" + lang + ".js");
+  var projects = require("./data/projects/projects_" + lang + ".js");
 %>
 <html lang="<%= lang %>">
   <head>
-    <title><%= data.meta.title %></title>
+    <title><%= texts.meta.title %></title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <meta property="og:url" content="http://askd.rocks"/>
-  	<meta property="og:title" content="<%= data.meta.title %>"/>
-  	<meta property="og:description" content="<%= data.meta.description %>"/>
-  	<meta property="og:image" content="<%= data.meta.image %>"/>
-  	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans&subset=latin,cyrillic">
+  	<meta property="og:title" content="<%= texts.meta.title %>"/>
+  	<meta property="og:description" content="<%= texts.meta.description %>"/>
+  	<meta property="og:image" content="<%= texts.meta.image %>"/>
+  	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Ubuntu&subset=latin,cyrillic">
   	<link rel="shortcut icon" href="/assets/favicon.ico">
     <link rel="stylesheet" href="/assets/application.css" />
   </head>
   <body>
-    <section class="page" id="about">
-      <div class="about-wrap">
+    <input id="toggle" class="page-toggle" type="checkbox">
+    <main class="page">
+      <section class="page-section page-section_about">
         <%= template.about() %>
-        <div class="about-photo">
-  				<img src="/files/photos/anna.jpg" alt="<%= data.labels.home.person.name %>">
-  			</div>
-      </div>
-    </section>
-    <section class="page" id="projects">
-      <%= template.projects({ projects: data.projects, labels: data.labels.projects }) %>
-    </section>
-    <section class="page page_default" id="home">
-      <%= template.home({ lang: lang, labels: data.labels.home }) %>
-    </section>
-    <%= template.nav({ labels: data.labels.nav }) %>
+        <label class="projects-open" for="toggle"><%= texts.projects.title %></label>
+      </section>
+      <section class="page-section page-section_projects">
+        <%= template.projects({ projects: projects, texts: texts.projects }) %>
+      </section>
+      <label class="page-overlay" for="toggle"></label>
+    </main>
+    <%= template.header({ texts: texts.meta }) %>
   </body>
 </html>

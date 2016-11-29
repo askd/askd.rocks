@@ -18,6 +18,7 @@
 		"customer": "cpeople"
 	},
 	{
+    "hidden": true,
 		"url": "promo.cityexpress.ru",
 		"title": "City Express Promo",
 		"picture": "cityexpress.jpg",

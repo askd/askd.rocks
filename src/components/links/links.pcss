@@ -1,0 +1,117 @@
+.links {
+  padding-top: 60px;
+
+  @media (min-width: 641px) {
+    padding-top: 96px;
+  }
+  
+  &-list {
+  
+  }
+
+  
+  &-item {
+    margin-top: 12px;
+  }
+
+  &-link {
+    display: block;
+    padding-left: 36px;
+    height: 36px;
+    font-size: 14px;
+    line-height: 36px;
+    letter-spacing: 0.05em;
+    color: $color-dark;
+    background-position: 0 0;
+    background-size: 36px 36px;
+    background-repeat: no-repeat;
+    text-decoration: none;
+    transition: opacity 0.35s;
+
+    &:hover {
+      opacity: 0.75;
+    }
+
+    &_gh {
+      background-image: svg-load('images/gh.svg', fill: $color-accent);
+    }
+    
+    &_fb {
+      background-image: svg-load('images/fb.svg', fill: $color-accent);
+    }
+
+    &_tw {
+      background-image: svg-load('images/tw.svg', fill: $color-accent);
+    }
+
+    &_in {
+      background-image: svg-load('images/in.svg', fill: $color-accent);
+    }
+  }
+
+  &-open {
+    position: absolute;
+    top: 48px;
+    right: 0;
+    margin: 12px 12px 0 0;
+    font-size: 10px;
+    line-height: 24px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $color-accent;
+    cursor: pointer;
+
+    &::after {
+      content: '\2192';
+    }
+
+    @media (min-width: 480px) {
+      display: none;
+    }
+  }
+
+  &-close {
+    position: fixed;
+    top: 48px;
+    right: 0;
+    width: 48px;
+    height: 48px;
+    background: $color-light;
+
+    opacity: 0;
+    transition: opacity 0.35s;
+    cursor: pointer;
+
+    .page-toggle:checked ~ .page & {
+      opacity: 0.5;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 24px;
+        height: 2px;
+        margin: -1px 0 0 -12px;
+        background: $color-accent;
+      }
+
+      &::before {
+        transform: rotate(-45deg);
+      }
+
+      &::after {
+        transform: rotate(45deg);
+      }
+    }
+
+    @media (min-width: 641px) {
+      display: none;
+    }
+  }
+}

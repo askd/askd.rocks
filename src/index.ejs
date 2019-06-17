@@ -2,12 +2,11 @@
 <%
   var lang = htmlWebpackPlugin.options.lang;
   var template = {
-    about:    require("./components/about/about_" + lang + ".ejs"),
-    projects: require("./components/projects/projects.ejs"),
-    header:   require("./components/header/header.ejs"),
+    about:  require("./components/about/about_" + lang + ".ejs"),
+    links:  require("./components/links/links.ejs"),
+    header: require("./components/header/header.ejs"),
   };
   var texts = require("./data/texts/texts_" + lang + ".js");
-  var projects = require("./data/projects/projects_" + lang + ".js");
 %>
 <html lang="<%= lang %>">
   <head>
@@ -20,17 +19,16 @@
   	<meta property="og:image" content="<%= texts.meta.image %>"/>
   	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ubuntu&subset=latin,cyrillic">
   	<link rel="shortcut icon" href="/assets/favicon.ico">
-    <link rel="stylesheet" href="/assets/application.css" />
   </head>
   <body>
     <input id="toggle" class="page-toggle" type="checkbox">
     <main class="page">
-      <section class="page-section page-section_about">
+      <section class="page-section page-section_main">
         <%= template.about() %>
-        <label class="projects-open" for="toggle"><%= texts.projects.title %></label>
+        <label class="links-open" for="toggle"><%= texts.links.title %></label>
       </section>
-      <section class="page-section page-section_projects">
-        <%= template.projects({ projects: projects, texts: texts.projects }) %>
+      <section class="page-section page-section_sidebar">
+        <%= template.links() %>
       </section>
       <label class="page-overlay" for="toggle"></label>
     </main>
